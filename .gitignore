@@ -1,0 +1,73 @@
+# --- Node / JS (base)
+**/node_modules/
+**/.npm/
+**/.eslintcache
+**/.cache/
+**/.parcel-cache/
+
+# Logs
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# --- Vite / Build artifacts
+# (Vite gera dist/ por padrão)
+**/dist/
+**/dist-ssr/
+**/.vite/
+**/vite.config.ts.timestamp-*
+**/vite.config.js.timestamp-*
+
+# --- Test & coverage
+**/coverage/
+**/.nyc_output/
+
+# --- Env (mantenha apenas exemplos)
+*.env
+*.env.*.local
+!.env.example
+
+# --- Yarn
+# (lock deve ser versionado)
+# Se usar Yarn Berry, veja bloco especial mais abaixo.
+.yarn-integrity
+.pnp.loader.mjs
+
+# --- NPM / PNPM (caso alguém rode sem querer)
+package-lock.json
+pnpm-lock.yaml
+shrinkwrap.yaml
+
+# --- SO / editores
+# macOS
+.DS_Store
+**/.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+# Linux
+*.swp
+*~
+# VSCode (permite compartilhar recomendações se quiser)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+# JetBrains
+.idea/
+*.iml
+
+# --- Misc
+*.local
+*.tmp
+*.temp
+*.orig
+*.bak
+
+# --- Caso tenha assets gerados
+**/public/**/*.map
+**/*.map
