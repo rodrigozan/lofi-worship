@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Mixer } from '../audio/mixer';
 import { loadAudioBuffer } from '../audio/loader';
 
+declare global {
+  interface Window { __mixer?: Mixer; }
+}
+
 export default function Player() {
   const mixerRef = useRef<Mixer | null>(null);
   const [ready, setReady] = useState(false);
@@ -12,6 +16,10 @@ export default function Player() {
   useEffect(() => {
     const m = new Mixer();
     mixerRef.current = m;
+
+    if (import.meta.env.MODE !== 'production') {
+      window.__mixer = m; // <-- E2E olha aqui
+    }
 
     (async () => {
       const [lofiBuf, rainBuf] = await Promise.all([

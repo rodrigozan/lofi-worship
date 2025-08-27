@@ -64,4 +64,19 @@ export class Mixer {
       await this.ctx.resume();
     }
   }
+
+  // adicione dentro da class Mixer
+  get state() {
+    return this.ctx.state;
+  }
+  get sourceCount() {
+    return Object.keys(this.sources).length;
+  }
+  get gainsValues() {
+    return {
+      lofi: this.gains.lofi.gain.value,
+      rain: this.gains.rain.gain.value
+    };
+  }
+
 }
