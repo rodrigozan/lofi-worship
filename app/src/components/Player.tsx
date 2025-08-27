@@ -72,7 +72,7 @@ export default function Player() {
             onClick={handlePlay}
             disabled={!ready}
             className="px-4 py-2 rounded-xl bg-black text-white disabled:opacity-50">
-            Play (iniciar com gesto)
+            Play
           </button>
         ) : (
           <button
